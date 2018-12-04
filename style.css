@@ -1,0 +1,213 @@
+/*---------------------------
+            responsive
+----------------------------*/
+
+/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*---------------------------
+            grid
+----------------------------*/
+
+
+.center-box {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+
+@media only screen and (min-width: 1201px) {
+
+    .center-box,.fluid-center-box {
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .center-box, .fluid-center-box {
+        width: 100%;
+    }
+}
+
+
+/* Mobilon pedig minden 100%-ra ugrik */
+
+
+@media only screen and (max-width: 767px) {
+    .center-box {
+        padding: 0;
+    }
+}
+
+/*---------------------------
+            global
+----------------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body{
+    background: #f7f7f7;
+}
+
+body{
+ font-family: 'Montserrat', sans-serif;
+ color: #322c1c;   
+ font-size: 15px;
+ line-height: 1.7em;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 0;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+article p,
+article ul,
+article h1,
+article h2,
+article h3,
+article h4 {
+padding: 0 8vw;
+}
+
+@media only screen and (max-width: 767px) {
+article p,
+article ul,
+article h1,
+article h2,
+article h3,
+article h4 {
+padding: 0 4vw;
+}
+}
+
+article p{
+    padding-bottom: 15px;
+    text-align: justify;
+}
+
+.left {
+padding: 15px;
+background: #cecece;
+margin-bottom: 15px;    
+}
+
+.alignleft, .alignright{
+   padding-bottom: 20px; 
+}
+
+.alignleft {
+padding-right: 8vw;
+}
+
+.alignright {
+padding-left: 8vw;
+}
+
+.floatleft {
+float: left;
+padding-right: 30px;
+width: 50%;
+}
+
+.floatright {
+float: right;
+padding-left: 30px;
+width: 50%;
+}
+
+
+h2{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 20px!important;
+    padding-top: 20px!important;
+}
+
+ul li{
+    position: relative;
+    padding-left: 25px;
+}
+
+
+ul li:after {
+content: "";
+display: block;
+position: absolute;
+top: 50%;
+left: 4px;
+margin-top: -6px;
+height: 6px;
+width: 6px;
+border-bottom: 2px solid #322c1c;
+border-right: 2px solid #322c1c;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
